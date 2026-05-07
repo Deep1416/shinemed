@@ -1,25 +1,25 @@
-import { Header } from './components/layout/Header'
-import { Footer } from './components/layout/Footer'
-import { About } from './components/sections/About'
-import { Hero } from './components/sections/Hero'
-import { ContactTicker } from './components/sections/ContactTicker'
-import { Services } from './components/sections/Services'
-import { Testimonials } from './components/sections/Testimonials'
-import { WhyChooseUs } from './components/sections/WhyChooseUs'
+import { Route, Routes } from 'react-router-dom'
+import { RootLayout } from './shared/layouts/RootLayout'
+import { AboutPage } from './pages/AboutPage'
+import { HomePage } from './pages/HomePage'
+import { ServicesPage } from './pages/ServicesPage'
+import { ShopPage } from './pages/ShopPage'
+import { ProductDetailPage } from './pages/ProductDetailPage'
+import { ContactPage } from './pages/ContactPage'
 import './App.css'
 
 function App() {
   return (
-    <main className="site-shell">
-      <Header />
-      <Hero />
-      <ContactTicker />
-      <About />
-      <Services />
-      <WhyChooseUs />
-      <Testimonials />
-      <Footer />
-    </main>
+    <Routes>
+      <Route element={<RootLayout />}>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/services" element={<ServicesPage />} />
+        <Route path="/shop" element={<ShopPage />} />
+        <Route path="/shop/:productId" element={<ProductDetailPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+      </Route>
+    </Routes>
   )
 }
 

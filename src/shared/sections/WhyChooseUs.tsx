@@ -1,4 +1,4 @@
-import { whyChooseUsCards } from '../../data/whyChooseUs'
+import { whyChooseUsCards } from '../data/whyChooseUs'
 
 export function WhyChooseUs() {
   return (
@@ -9,10 +9,10 @@ export function WhyChooseUs() {
             <span aria-hidden="true" />
             WHY CHOOSE US
           </div>
-          <h2 id="why-heading">Why Choose ReliaCare?</h2>
+          <h2 id="why-heading">Why Choose Shinemed Pharmaceuticals Pvt Ltd?</h2>
           <p>
-            At ReliaCare, we offer a wide range of healthcare services to support you
-            and your family, whether in person or online.
+            At Shinemed Pharmaceuticals Pvt Ltd, we offer a wide range of healthcare services to
+            support you and your family, whether in person or online.
           </p>
         </div>
 

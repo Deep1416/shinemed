@@ -1,5 +1,5 @@
 import { ArrowRight } from 'lucide-react'
-import { services } from '../../data/services'
+import { services } from '../data/services'
 
 export function Services() {
   return (
@@ -12,8 +12,8 @@ export function Services() {
           </div>
           <h2 id="services-heading">Complete Care for Your Everyday Health Needs</h2>
           <p>
-            At ReliaCare, we offer a wide range of healthcare services to support you
-            and your family, whether in person or online.
+            At Shinemed Pharmaceuticals Pvt Ltd, we offer a wide range of healthcare services to
+            support you and your family, whether in person or online.
           </p>
         </div>
 

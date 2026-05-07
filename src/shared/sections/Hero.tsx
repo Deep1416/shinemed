@@ -1,5 +1,3 @@
-import { ActionButton } from '../ui/ActionButton'
-
 export function Hero() {
   return (
     <section className="hero-section" id="home" aria-labelledby="hero-heading">
@@ -15,14 +13,10 @@ export function Hero() {
           Trustworthy <mark>Care</mark> for You and Your Family
         </h1>
         <p>
-          Comprehensive, compassionate healthcare services designed to support your
-          family's well-being at every stage of life.
+          Comprehensive, compassionate healthcare services designed to support
+          your family's well-being at every stage of life.
         </p>
-        <div className="hero-content__actions">
-          <ActionButton>Book Appointment</ActionButton>
-          <ActionButton variant="secondary">Explore Services</ActionButton>
-        </div>
       </div>
     </section>
-  )
+  );
 }

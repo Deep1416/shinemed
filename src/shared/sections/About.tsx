@@ -1,9 +1,13 @@
-import { aboutStats } from '../../data/aboutStats'
+import { aboutStats } from '../data/aboutStats'
 import { ActionButton } from '../ui/ActionButton'
 
 export function About() {
   return (
-    <section className="about-section" id="about" aria-labelledby="about-heading">
+    <section
+      className="about-section"
+      id="about"
+      aria-labelledby="about-heading"
+    >
       <div className="about-section__inner">
         <div className="section-kicker">
           <span aria-hidden="true" />
@@ -11,19 +15,22 @@ export function About() {
         </div>
 
         <div className="about-section__intro">
-          <h2 id="about-heading">Dedicated to Your Health, Every Step of the Way</h2>
+          <h2 id="about-heading">
+            Dedicated to Your Health, Every Step of the Way
+          </h2>
           <div className="about-section__copy">
             <p>
-              At ReliaCare, we provide compassionate, reliable medical services tailored
-              to individuals and families. Whether you visit us in person or connect
-              through telehealth, our experienced team is here to deliver accessible
-              care with professionalism
+              At Shinemed Pharmaceuticals Pvt Ltd, we provide compassionate, reliable healthcare
+              services
+              tailored to individuals and families. Whether you visit us in
+              person or connect through telehealth, our experienced team is here
+              to deliver accessible care with professionalism
             </p>
             <ActionButton>About Us</ActionButton>
           </div>
         </div>
 
-        <dl className="about-stats" aria-label="ReliaCare achievements">
+        <dl className="about-stats" aria-label="Shinemed Pharmaceuticals Pvt Ltd achievements">
           {aboutStats.map((stat) => (
             <div className="about-stats__item" key={stat.label}>
               <dt>{stat.value}</dt>
