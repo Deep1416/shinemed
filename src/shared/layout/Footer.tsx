@@ -1,4 +1,3 @@
-import { HeartPulse } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { footerQuickLinks, footerSocialLinks } from '../data/footer'
 
@@ -48,9 +47,6 @@ export function Footer() {
 
         <div className="footer-brand-panel">
           <Link className="footer-brand" to="/" aria-label="Shinemed Pharmaceuticals Pvt Ltd home">
-            <span className="footer-brand__mark" aria-hidden="true">
-              <HeartPulse size={28} fill="currentColor" strokeWidth={2.5} />
-            </span>
             <span>Shinemed Pharmaceuticals Pvt Ltd</span>
           </Link>
           <p>

@@ -1,6 +1,5 @@
 import generalClinicImage from '../../assets/services/general-clinic.png'
 import pharmacyImage from '../../assets/services/pharmacy-medication.png'
-import heroImage from '../../assets/hero.png'
 import { aboutStats } from '../data/aboutStats'
 
 export function AboutHighlights() {
@@ -24,7 +23,12 @@ export function AboutHighlights() {
           </div>
 
           <figure className="about-mosaic__img about-mosaic__img--center">
-            <img src={heroImage} alt="Doctors collaborating to support patients" />
+            <img
+              src="https://cdn.prod.website-files.com/687dbda1698c0a7c3f05d5ad/68898dfa5d4057609629f784_about-second-section-image-2-p-1080.webp"
+              alt="Doctors collaborating to support patients"
+              loading="lazy"
+              decoding="async"
+            />
           </figure>
 
           <div className="about-mosaic__card about-mosaic__card--soft about-mosaic__card--mission">

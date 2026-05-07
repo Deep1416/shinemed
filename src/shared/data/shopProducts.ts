@@ -1,5 +1,5 @@
 import type { LucideIcon } from 'lucide-react'
-import { Droplet, HeartPulse, Pill, Scan, Stethoscope } from 'lucide-react'
+import { Activity, Droplet, Pill, Scan, Stethoscope } from 'lucide-react'
 
 export type ShopProduct = {
   id: string
@@ -54,7 +54,7 @@ export const shopProducts: ShopProduct[] = [
     currency: 'USD',
     description:
       'PurePulse Oximeter provides quick SpO₂ and pulse readings to support fitness tracking, wellness, and respiratory monitoring.',
-    Icon: HeartPulse,
+    Icon: Activity,
   },
   {
     id: 'flexiwrap-bandages',

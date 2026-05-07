@@ -1,4 +1,3 @@
-import { ShoppingBag } from 'lucide-react'
 import { shopProducts } from '../shared/data/shopProducts'
 import { Link } from 'react-router-dom'
 
@@ -32,9 +31,6 @@ export function ShopPage() {
                   <div className="shop-card__footer">
                     <span className="shop-card__price">
                       $ {product.price} {product.currency}
-                    </span>
-                    <span className="shop-card__cart" aria-hidden="true">
-                      <ShoppingBag size={22} strokeWidth={2.2} />
                     </span>
                   </div>
                 </Link>
