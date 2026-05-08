@@ -26,7 +26,7 @@ export function About() {
               person or connect through telehealth, our experienced team is here
               to deliver accessible care with professionalism
             </p>
-            <ActionButton>About Us</ActionButton>
+            <ActionButton to="/about">About Us</ActionButton>
           </div>
         </div>
 

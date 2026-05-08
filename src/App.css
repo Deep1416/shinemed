@@ -2521,8 +2521,8 @@
   display: grid;
   gap: 28px;
   grid-template-columns: 1fr auto;
-  min-height: 112px;
-  padding: 0 clamp(28px, 5.9vw, 120px);
+  min-height: 60px;
+  padding: 0 clamp(18px, 5.9vw, 120px);
 }
 
 .footer-bottom p {
