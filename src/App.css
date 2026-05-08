@@ -2666,7 +2666,12 @@
   }
 
   .product-detail-cards {
+    gap: 24px;
     grid-template-columns: 1fr;
+  }
+
+  .product-info-card {
+    padding: 24px 22px;
   }
 
   .contact-form__grid {
@@ -2915,6 +2920,49 @@
 
   .product-detail-section {
     padding: 72px 22px 72px;
+  }
+
+  .page-hero__tagline {
+    font-size: 0.95rem;
+    margin-top: 10px;
+  }
+
+  .product-detail-tagline {
+    font-size: 0.85rem;
+    margin-top: 6px;
+  }
+
+  .product-detail-composition {
+    margin-top: 20px;
+    padding: 14px 16px;
+  }
+
+  .product-detail-composition__text {
+    font-size: 0.88rem;
+  }
+
+  .product-detail-cards {
+    gap: 16px;
+    margin-top: 36px;
+  }
+
+  .product-info-card {
+    border-radius: 14px;
+    padding: 20px 18px;
+  }
+
+  .product-info-card__title {
+    font-size: 1.05rem;
+    margin-bottom: 14px;
+  }
+
+  .product-info-list {
+    gap: 10px;
+  }
+
+  .product-info-list__item {
+    font-size: 0.9rem;
+    gap: 8px;
   }
 
   .contact-form-section {
