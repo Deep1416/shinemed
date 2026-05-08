@@ -1,4 +1,3 @@
-import { ArrowRight } from "lucide-react";
 import { services } from "../data/services";
 
 export function Services() {

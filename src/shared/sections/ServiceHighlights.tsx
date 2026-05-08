@@ -1,4 +1,4 @@
-import { Check, ChevronRight } from "lucide-react";
+import { Check } from "lucide-react";
 import { services } from "../data/services";
 
 export function ServiceHighlights() {

@@ -1,5 +1,4 @@
 import { ServiceHighlights } from "../shared/sections/ServiceHighlights";
-import { Services } from "../shared/sections/Services";
 
 export function ServicesPage() {
 	return (
