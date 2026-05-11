@@ -1,3 +1,5 @@
+'use client'
+
 import { testimonials } from '../data/testimonials'
 import { useEffect, useMemo, useRef, useState } from 'react'
 

@@ -1,5 +1,5 @@
 import { shopProducts } from "../shared/data/shopProducts";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 export function ShopPage() {
 	return (
@@ -21,7 +21,7 @@ export function ShopPage() {
 				<div className="shop-section__inner">
 					<div className="shop-grid">
 						{shopProducts.map((product) => (
-							<Link className="shop-card" key={product.id} to={`/shop/${product.id}`}>
+							<Link className="shop-card" key={product.id} href={`/shop/${product.id}`}>
 								<div className="shop-card__media">
 									<img
 										className="shop-card__image"

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { shopProducts } from "../data/shopProducts";
 import { ActionButton } from "../ui/ActionButton";
 
@@ -18,7 +18,7 @@ export function FeaturedProducts() {
 
 				<div className="shop-grid">
 					{featured.map((product) => (
-						<Link className="shop-card" key={product.id} to={`/shop/${product.id}`}>
+						<Link className="shop-card" key={product.id} href={`/shop/${product.id}`}>
 							<div className="shop-card__media">
 								<img className="shop-card__image" src={product.image} alt={product.name} />
 							</div>

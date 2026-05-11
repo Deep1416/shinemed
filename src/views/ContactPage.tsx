@@ -1,3 +1,5 @@
+'use client'
+
 import { ChevronRight, Link2, Mail, MapPin, Phone } from "lucide-react";
 
 export function ContactPage() {
@@ -70,7 +72,7 @@ export function ContactPage() {
 							</div>
 							<div className="contact-detail-card__rule" role="presentation" />
 							<p>
-								<a href="tel:8757469988">8757469988</a>
+								<a href="tel:+918757469988">+91 8757469988</a>
 							</p>
 						</article>
 

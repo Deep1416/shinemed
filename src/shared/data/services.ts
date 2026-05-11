@@ -1,7 +1,3 @@
-import generalClinicImage from "../../assets/services/general-clinic.png";
-import pharmacyImage from "../../assets/services/pharmacy-medication.png";
-import heroImage from "../../assets/shop/telehelath.jpeg";
-
 export const services = [
 	{
 		id: "01",
@@ -12,7 +8,7 @@ export const services = [
 			"Preventive checkups and routine screenings",
 			"Personalized treatment plans for every patient",
 		],
-		image: generalClinicImage,
+		image: "/services/general-clinic.png",
 		imageAlt: "Doctor consulting with a patient in a clinic office",
 	},
 	{
@@ -24,7 +20,7 @@ export const services = [
 			"Reliable medications for everyday health needs",
 			"Safe dosage support for better wellness",
 		],
-		image: pharmacyImage,
+		image: "/services/pharmacy-medication.png",
 		imageAlt: "Medication bottle being selected from a pharmacy shelf",
 	},
 	{
@@ -36,7 +32,7 @@ export const services = [
 			"Quick access to medical advice remotely",
 			"Convenient virtual appointments anytime, anywhere",
 		],
-		image: heroImage,
+		image: "/shop/telehelath.jpeg",
 		imageAlt: "Telehealth consultation with a doctor",
 	},
 ];

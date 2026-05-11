@@ -1,6 +1,7 @@
-import generalClinicImage from '../../assets/services/general-clinic.png'
-import pharmacyImage from '../../assets/services/pharmacy-medication.png'
 import { aboutStats } from '../data/aboutStats'
+
+const generalClinicImage = '/services/general-clinic.png'
+const pharmacyImage = '/services/pharmacy-medication.png'
 
 export function AboutHighlights() {
   return (

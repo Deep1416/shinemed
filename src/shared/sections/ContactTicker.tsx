@@ -1,9 +1,11 @@
+'use client'
+
 import { Mail, PhoneCall } from 'lucide-react'
 import { useEffect, useMemo, useRef, useState } from 'react'
 
 const baseItems = [
   { icon: Mail, label: 'Email: shinemedpharmaceuticals@gmail.com' },
-  { icon: PhoneCall, label: 'Call Us: 8757469988' },
+  { icon: PhoneCall, label: 'Call Us: +91 8757469988' },
 ]
 
 export function ContactTicker() {

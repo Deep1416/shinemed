@@ -1,29 +1,43 @@
+'use client'
+
 import { useCallback, useEffect, useId, useState } from 'react'
 import { ChevronRight, Menu, X } from 'lucide-react'
-import { Link, useLocation } from 'react-router-dom'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { navigationItems } from '../data/navigation'
 
 type NavItem = (typeof navigationItems)[number]
 
-function itemIsActive(item: NavItem, location: ReturnType<typeof useLocation>) {
-  if (item.href === '/about') return location.pathname === '/about'
-  if (item.href === '/services') return location.pathname === '/services'
-  if (item.href === '/shop')
-    return location.pathname === '/shop' || location.pathname.startsWith('/shop/')
-  if (item.href.startsWith('#')) return location.pathname === '/' && location.hash === item.href
-  return location.pathname === '/' && item.href === '/'
+function itemIsActive(item: NavItem, pathname: string, hash: string) {
+  if (item.href === '/about') return pathname === '/about'
+  if (item.href === '/services') return pathname === '/services'
+  if (item.href === '/shop') return pathname === '/shop' || pathname.startsWith('/shop/')
+  if (item.href === '/contact') return pathname === '/contact'
+  if (item.href.startsWith('#')) return pathname === '/' && (hash === item.href || hash === '')
+  return false
 }
 
 export function Header() {
-  const location = useLocation()
+  const pathname = usePathname()
+  const [hash, setHash] = useState('')
   const menuPanelId = useId()
   const [mobileOpen, setMobileOpen] = useState(false)
 
   const closeMobile = useCallback(() => setMobileOpen(false), [])
 
   useEffect(() => {
+    setHash(window.location.hash)
+    const onHashChange = () => {
+      setHash(window.location.hash)
+      closeMobile()
+    }
+    window.addEventListener('hashchange', onHashChange)
+    return () => window.removeEventListener('hashchange', onHashChange)
+  }, [closeMobile])
+
+  useEffect(() => {
     closeMobile()
-  }, [location.pathname, location.hash, closeMobile])
+  }, [pathname, closeMobile])
 
   useEffect(() => {
     if (!mobileOpen) return
@@ -44,70 +58,36 @@ export function Header() {
   }, [mobileOpen, closeMobile])
 
   const renderDesktopLink = (item: NavItem) => {
-    const isActive = itemIsActive(item, location)
+    const isActive = itemIsActive(item, pathname, hash)
     const className = `primary-nav__link ${isActive ? 'is-active' : ''}`
-
-    if (item.href === '/about' || item.href === '/services' || item.href === '/shop' || item.href === '/contact') {
-      return (
-        <Link className={className} to={item.href} key={item.label}>
-          {isActive && <span className="primary-nav__dot" aria-hidden="true" />}
-          <span>{item.label}</span>
-        </Link>
-      )
-    }
-
-    if (item.href.startsWith('#')) {
-      return (
-        <Link className={className} to={`/${item.href}`} key={item.label}>
-          {isActive && <span className="primary-nav__dot" aria-hidden="true" />}
-          <span>{item.label}</span>
-        </Link>
-      )
-    }
+    const href = item.href.startsWith('#') ? `/${item.href}` : item.href
 
     return (
-      <a className={className} href={item.href} key={item.label}>
+      <Link className={className} href={href} key={item.label}>
         {isActive && <span className="primary-nav__dot" aria-hidden="true" />}
         <span>{item.label}</span>
-      </a>
+      </Link>
     )
   }
 
   const renderMobileLink = (item: NavItem) => {
-    const isActive = itemIsActive(item, location)
+    const isActive = itemIsActive(item, pathname, hash)
     const className = `mobile-nav__link ${isActive ? 'is-active' : ''}`
+    const href = item.href.startsWith('#') ? `/${item.href}` : item.href
     const dot = isActive ? <span className="mobile-nav__dot" aria-hidden="true" /> : null
 
-    if (item.href === '/about' || item.href === '/services' || item.href === '/shop' || item.href === '/contact') {
-      return (
-        <Link className={className} to={item.href} key={item.label} onClick={closeMobile}>
-          {dot}
-          <span>{item.label}</span>
-        </Link>
-      )
-    }
-
-    if (item.href.startsWith('#')) {
-      return (
-        <Link className={className} to={`/${item.href}`} key={item.label} onClick={closeMobile}>
-          {dot}
-          <span>{item.label}</span>
-        </Link>
-      )
-    }
-
     return (
-      <a className={className} href={item.href} key={item.label} onClick={closeMobile}>
+      <Link className={className} href={href} key={item.label} onClick={closeMobile}>
         {dot}
         <span>{item.label}</span>
-      </a>
+      </Link>
     )
   }
 
   return (
     <>
       <header className="site-header" aria-label="Primary">
-        <Link className="brand" to="/" aria-label="Shinemed Pharmaceuticals Pvt Ltd home">
+        <Link className="brand" href="/" aria-label="Shinemed Pharmaceuticals Pvt Ltd home">
           <span className="brand__name" aria-label="Shinemed Pharmaceuticals Pvt Ltd">
             <span className="brand__name-main">Shinemed</span>
             <span className="brand__name-sub">Pharmaceuticals Pvt Ltd</span>
@@ -129,7 +109,7 @@ export function Header() {
           >
             <Menu size={26} strokeWidth={2.4} aria-hidden="true" />
           </button>
-          <Link className="action-button action-button--primary header-actions__contact" to="/contact">
+          <Link className="action-button action-button--primary header-actions__contact" href="/contact">
             <span>Contact Us</span>
             <span className="action-button__icon" aria-hidden="true">
               <ChevronRight size={24} strokeWidth={3} />
@@ -150,7 +130,7 @@ export function Header() {
         <div className="mobile-nav__backdrop" onClick={closeMobile} aria-hidden="true" />
         <div className="mobile-nav__sheet">
           <div className="mobile-nav__topbar">
-            <Link className="brand brand--compact" to="/" onClick={closeMobile}>
+            <Link className="brand brand--compact" href="/" onClick={closeMobile}>
               <span className="brand__name" aria-label="Shinemed Pharmaceuticals Pvt Ltd">
                 <span className="brand__name-main">Shinemed</span>
                 <span className="brand__name-sub">Pharmaceuticals Pvt Ltd</span>
@@ -164,7 +144,7 @@ export function Header() {
             <nav className="mobile-nav__links" aria-label="Main navigation">
               {navigationItems.map(renderMobileLink)}
             </nav>
-            <Link className="action-button action-button--primary mobile-nav__cta" to="/contact" onClick={closeMobile}>
+            <Link className="action-button action-button--primary mobile-nav__cta" href="/contact" onClick={closeMobile}>
               <span>Contact Us</span>
               <span className="action-button__icon" aria-hidden="true">
                 <ChevronRight size={24} strokeWidth={3} />

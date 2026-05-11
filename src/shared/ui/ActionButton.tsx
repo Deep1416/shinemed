@@ -1,6 +1,6 @@
 import { ChevronRight } from 'lucide-react'
 import type { ButtonHTMLAttributes } from 'react'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 
 type ActionButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   variant?: 'primary' | 'secondary'
@@ -25,7 +25,7 @@ export function ActionButton({
 
   if (to) {
     return (
-      <Link to={to} className={`action-button action-button--${variant} ${className}`}>
+      <Link href={to} className={`action-button action-button--${variant} ${className}`}>
         {inner}
       </Link>
     )

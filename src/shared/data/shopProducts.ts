@@ -1,14 +1,3 @@
-import ziscovit from "../../assets/shop/ziscovit.jpeg";
-import shinewash from "../../assets/shop/shinewash.jpeg";
-import etococshine from "../../assets/shop/etococshine.jpeg";
-import rabmed from "../../assets/shop/rabmed.jpeg";
-import shineclav from "../../assets/shop/shineclav.jpeg";
-import dyshingest from "../../assets/shop/dyshingest.jpeg";
-import ferosin from "../../assets/shop/ferosin.jpeg";
-import itramiz from "../../assets/shop/itramiz.jpeg";
-import shincal from "../../assets/shop/shincal.jpeg";
-import thioshine from "../../assets/shop/thioshine.jpeg";
-
 export type ShopProduct = {
 	id: string;
 	name: string;
@@ -45,7 +34,7 @@ export const shopProducts: ShopProduct[] = [
 			"Minimizes digestive complaints",
 			"A Revolutionary Approach in Vital Healthcare",
 		],
-		image: ziscovit,
+		image: "/shop/ziscovit.jpeg",
 	},
 	{
 		id: "shinewash",
@@ -67,7 +56,7 @@ export const shopProducts: ShopProduct[] = [
 			"Soothing plant extracts relieve discomfort",
 			"Maintains Vaginal Flora and natural pH balance",
 		],
-		image: shinewash,
+		image: "/shop/shinewash.jpeg",
 	},
 	{
 		id: "etococshine",
@@ -89,7 +78,7 @@ export const shopProducts: ShopProduct[] = [
 			"Significantly reduces chronic back pain disability",
 			"Improves physical functioning and quality of life",
 		],
-		image: etococshine,
+		image: "/shop/etococshine.jpeg",
 	},
 	{
 		id: "rabmed-d",
@@ -112,7 +101,7 @@ export const shopProducts: ShopProduct[] = [
 			"Reduces nocturnal dyspeptic syndrome",
 			"Dual action: acid suppression + promotes gastric emptying",
 		],
-		image: rabmed,
+		image: "/shop/rabmed.jpeg",
 	},
 	{
 		id: "shineclav-cv-625",
@@ -136,7 +125,7 @@ export const shopProducts: ShopProduct[] = [
 			"UTI success rate: 97%",
 			"Broad-spectrum coverage of gram +ve and -ve organisms",
 		],
-		image: shineclav,
+		image: "/shop/shineclav.jpeg",
 	},
 	{
 		id: "dyshingest-10",
@@ -159,16 +148,18 @@ export const shopProducts: ShopProduct[] = [
 			"Prevents pregnancy loss by supporting the luteal phase",
 			"Supports cycle regulation and high-risk pregnancies",
 		],
-		image: dyshingest,
+		image: "/shop/dyshingest.jpeg",
 	},
 	{
 		id: "ferosin-xt",
 		name: "Ferosin-XT",
 		tagline: "Progress Towards Healthy Life",
-		description: "Ferosin-XT combines Ferrous Ascorbate 100 mg, Folic Acid 1.5 mg, and Zinc Sulphate 22.5 mg into a comprehensive iron supplement. Ferrous Ascorbate offers 2× higher bioavailability than Ferric forms, making it the ideal choice for managing iron deficiency during pregnancy, lactation, and periods of rapid growth.",
-		composition: "Ferrous Ascorbate 100 mg + Folic Acid 1.5 mg + Zinc Sulphate 22.5 mg Tablets",
+		description: "Ferosin-XT is a comprehensive nutritional supplement combining Ferrous Ascorbate 100 mg, Cyanocobalamin (Vitamin B12) 15 mcg, Folic Acid 200 mcg, Zinc 7.5 mg, and Vitamin D3 10 mg. This advanced five-in-one formula corrects iron deficiency anemia while supporting nerve function, bone strength, foetal development, and immunity — making it the ideal choice during pregnancy, lactation, and periods of rapid growth.",
+		composition: "Ferrous Ascorbate 100 mg + Cyanocobalamin 15 mcg + Folic Acid 200 mcg + Zinc 7.5 mg + Vitamin D3 10 mg Tablets",
 		indications: [
 			"Iron Deficiency Anemia",
+			"Vitamin B12 Deficiency",
+			"Vitamin D Deficiency",
 			"Pregnancy & Lactation",
 			"Heavy Menstruation",
 			"Chronic / Acute Blood Loss",
@@ -180,11 +171,13 @@ export const shopProducts: ShopProduct[] = [
 		keyBenefits: [
 			"2× higher bioavailability than Ferric iron forms",
 			"Significantly raises Hemoglobin levels in Iron Deficiency Anemia",
-			"Folic Acid prevents Anemia and supports erythropoiesis",
-			"Zinc Sulphate supports immune function and wound healing",
+			"Cyanocobalamin (B12) supports nerve health and red blood cell formation",
+			"Folic Acid prevents neural tube defects and supports erythropoiesis",
+			"Vitamin D3 enhances calcium absorption and supports bone health",
+			"Zinc supports immune function and wound healing",
 			"Gentle absorption with minimal GI side effects",
 		],
-		image: ferosin,
+		image: "/shop/ferosin.jpeg",
 	},
 	{
 		id: "itramiz-200",
@@ -207,7 +200,7 @@ export const shopProducts: ShopProduct[] = [
 			"Broad spectrum including Aspergillosis and Candidiasis",
 			"Potent fungistatic effective in immunocompromised patients",
 		],
-		image: itramiz,
+		image: "/shop/itramiz.jpeg",
 	},
 	{
 		id: "shincal-xt",
@@ -231,7 +224,7 @@ export const shopProducts: ShopProduct[] = [
 			"Methylcobalamin vital for maintaining normal baby size",
 			"Pyridoxal-5-Phosphate supports developing baby's neurotransmitters",
 		],
-		image: shincal,
+		image: "/shop/shincal.jpeg",
 	},
 	{
 		id: "thioshine-a",
@@ -254,7 +247,7 @@ export const shopProducts: ShopProduct[] = [
 			"No sedation — you stay alert while pain is relieved",
 			"Effective for both acute and chronic musculoskeletal conditions",
 		],
-		image: thioshine,
+		image: "/shop/thioshine.jpeg",
 	},
 ];
 

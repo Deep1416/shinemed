@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { footerQuickLinks, footerSocialLinks } from "../data/footer";
 
 export function Footer() {
@@ -12,10 +12,10 @@ export function Footer() {
 					</div>
 
 					<div className="footer-cta__actions" aria-label="Footer actions">
-						<Link className="footer-button footer-button--primary" to="/contact">
+						<Link className="footer-button footer-button--primary" href="/contact">
 							Contact Us
 						</Link>
-						<Link className="footer-button footer-button--ghost" to="/shop">
+						<Link className="footer-button footer-button--ghost" href="/shop">
 							Explore Products
 						</Link>
 					</div>
@@ -31,7 +31,7 @@ export function Footer() {
 					<ul>
 						{footerQuickLinks.map((link) => (
 							<li key={link.label}>
-								<Link className={link.active ? "is-active" : ""} to={link.href}>
+								<Link className={link.active ? "is-active" : ""} href={link.href}>
 									{link.label}
 								</Link>
 							</li>
@@ -40,7 +40,7 @@ export function Footer() {
 				</nav>
 
 				<div className="footer-brand-panel">
-					<Link className="footer-brand" to="/" aria-label="Shinemed Pharmaceuticals Pvt Ltd home">
+					<Link className="footer-brand" href="/" aria-label="Shinemed Pharmaceuticals Pvt Ltd home">
 						<span>Shinemed Pharmaceuticals Pvt Ltd</span>
 					</Link>
 					<p>Shinemed Pharmaceuticals Pvt Ltd provides trusted, accessible healthcare products and services to support every family.</p>
@@ -65,7 +65,7 @@ export function Footer() {
 						</li>
 						<li>
 							<span className="footer-contact__label">Phone</span>
-							<a href="tel:8757469988">8757469988</a>
+							<a href="tel:+918757469988">+91 8757469988</a>
 						</li>
 						<li>
 							<span className="footer-contact__label">Regd. Addres</span>
