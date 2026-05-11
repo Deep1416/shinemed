@@ -979,6 +979,10 @@
   margin: 0;
 }
 
+#products-heading{
+  margin-bottom: 50px;
+}
+
 .services-section {
   background: #fff;
   padding: var(--section-py-tight) var(--container-px) var(--section-py);

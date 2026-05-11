@@ -1,4 +1,4 @@
-import { aboutStats } from '../data/aboutStats'
+// import { aboutStats } from '../data/aboutStats'
 import { ActionButton } from '../ui/ActionButton'
 
 export function About() {
@@ -30,14 +30,14 @@ export function About() {
           </div>
         </div>
 
-        <dl className="about-stats" aria-label="Shinemed Pharmaceuticals Pvt Ltd achievements">
+        {/* <dl className="about-stats" aria-label="Shinemed Pharmaceuticals Pvt Ltd achievements">
           {aboutStats.map((stat) => (
             <div className="about-stats__item" key={stat.label}>
               <dt>{stat.value}</dt>
               <dd>{stat.label}</dd>
             </div>
           ))}
-        </dl>
+        </dl> */}
       </div>
     </section>
   )

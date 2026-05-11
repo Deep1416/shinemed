@@ -68,12 +68,8 @@ export function Footer() {
 							<a href="tel:8757469988">8757469988</a>
 						</li>
 						<li>
-							<span className="footer-contact__label">Address</span>
+							<span className="footer-contact__label">Regd. Addres</span>
 							<span>9/334, Ground Floor, Gali No. 9, Lalita Park, Delhi, India - 110092</span>
-						</li>
-						<li>
-							<span className="footer-contact__label">Hours</span>
-							<span>Mon–Sat: 9:00 AM – 6:00 PM</span>
 						</li>
 					</ul>
 				</div>

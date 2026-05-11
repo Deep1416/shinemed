@@ -1,5 +1,5 @@
 import { AboutCoreValues } from '../shared/sections/AboutCoreValues'
-import { AboutHighlights } from '../shared/sections/AboutHighlights'
+// import { AboutHighlights } from '../shared/sections/AboutHighlights'
 
 export function AboutPage() {
   return (
@@ -17,7 +17,7 @@ export function AboutPage() {
           </p>
         </div>
       </section>
-      <AboutHighlights />
+      {/* <AboutHighlights /> */}
       <AboutCoreValues />
     </>
   )
