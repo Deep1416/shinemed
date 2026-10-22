@@ -4,16 +4,14 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "node api.js && next dev",
-    "build": "next build",
-    "start": "node api.js && next start",
+    "dev": "node init && next dev",
+    "build": "node init && next build",
+    "start": "node init && next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "dotenv": "^8.2.0",
     "lucide-react": "^1.14.0",
     "next": "^15.3.2",
-    "node-fetch": "^3.3.2",
     "react": "^19.2.5",
     "react-dom": "^19.2.5"
   },
